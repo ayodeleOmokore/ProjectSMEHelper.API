@@ -33,4 +33,6 @@ public class User
     public string? OIdProvider { get; set; }
     public string? PictureURL { get; set; }
     public string? CompanyId { get; set; }
+    public string? Locale { get; set; }
+
 }

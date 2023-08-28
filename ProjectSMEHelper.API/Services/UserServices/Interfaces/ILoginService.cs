@@ -3,9 +3,9 @@ using ProjectSMEHelper.API.Contracts.Users.Responses;
 
 namespace ProjectSMEHelper.API.Services.UserServices.Interfaces;
 
-public interface ILogin
+public interface ILoginService
 {
-    Task<LoginResponse> Login(LoginRequest loginRequest);
+    Task<LoginResponse?> Login(LoginRequest loginRequest);
     Task<LoginResponse> CheckIfEmailExists(string email);
     
 }

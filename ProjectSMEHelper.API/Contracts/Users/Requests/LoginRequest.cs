@@ -13,7 +13,6 @@ public class LoginRequest
     public string? Password { get; set; }
     [Display(Name = "Remember me")]
     public bool RemeberMe { get; set; }
-    public string ReturnUrl { get; set; }
-
-    public IList<AuthenticationScheme> ExternalLogins { get; set; }
+    //public string ReturnUrl { get; set; }
+    //public IList<AuthenticationScheme> ExternalLogins { get; set; }
 }

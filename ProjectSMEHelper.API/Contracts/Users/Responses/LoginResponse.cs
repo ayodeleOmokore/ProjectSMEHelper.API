@@ -11,5 +11,6 @@ public class LoginResponse
     public string? OIdProvider { get; set; }
     public string? OId { get; set; }
     public bool Verified { get; set; }
+    public DateTime? VerifiedAt { get; set; }
 
 }

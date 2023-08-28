@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ProjectSMEHelper.API.Contracts.Users.Responses;
+namespace ProjectSMEHelper.API.Contracts.Users.Requests;
 
 public class RegisterUserByGoogleRequest
 {
@@ -10,7 +10,8 @@ public class RegisterUserByGoogleRequest
     public string? PhoneNumber { get; set; }
     public string? OId { get; set; }
     public string? OIdProvider { get; set; }
-    public string? PictureURL { get; set;}
+    public string? PictureURL { get; set; }
     public bool VerifiedEmail { get; set; }
+    public string? Locale { get; set; }
 
 }
