@@ -35,6 +35,7 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                     OId = user.OId,
                     OIdProvider = user.OIdProvider,
                     Verified = user.Verified,
+                    CompanyId = user.CompanyId,
                 };
             }
             else
@@ -78,7 +79,8 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                 OIdProvider = user?.OIdProvider,
                 OId = user?.OId,
                 Verified = user.Verified,
-                VerifiedAt = user.VerifiedAt
+                VerifiedAt = user.VerifiedAt,
+                CompanyId = user.CompanyId,
             };
         }
     }

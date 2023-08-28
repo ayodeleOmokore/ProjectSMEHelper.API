@@ -101,7 +101,8 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                     Status = user.Status,
                     OId = user.OId,
                     OIdProvider = user.OIdProvider,
-                    LastModifiedDate = user.LastModifiedDate
+                    LastModifiedDate = user.LastModifiedDate,
+                    CompanyId = user.CompanyId, 
                 };
             }
             User newUser = new()
@@ -135,7 +136,8 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                     Status = responseUser.Status,
                     OId = responseUser.OId,
                     OIdProvider = responseUser.OIdProvider,
-                    LastModifiedDate = responseUser.LastModifiedDate
+                    LastModifiedDate = responseUser.LastModifiedDate,
+                    CompanyId = responseUser.CompanyId,
                 };
             }
             return null;

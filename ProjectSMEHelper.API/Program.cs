@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using ProjectSMEHelper.API.DBContext.PostgreDBContext;
+using ProjectSMEHelper.API.Helpers;
+using ProjectSMEHelper.API.Services.EmailServices;
+using ProjectSMEHelper.API.Services.UserServices.Implementations;
+using ProjectSMEHelper.API.Services.UserServices.Interfaces;
 using Serilog;
 using System.Configuration;
 using System.Text;
@@ -50,6 +54,11 @@ builder.Services.AddAuthentication(options =>
                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
                };
            });
+builder.Services.AddTransient<ILoginService, LoginService>();
+builder.Services.AddTransient<IManageUserService, ManageUserService>();
+builder.Services.AddTransient<DAL>();
+builder.Services.AddTransient<ProjectSMEHelper.API.Helpers.Utility>();
+builder.Services.AddTransient<ISendEmailService, SendEmailService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -61,7 +70,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 

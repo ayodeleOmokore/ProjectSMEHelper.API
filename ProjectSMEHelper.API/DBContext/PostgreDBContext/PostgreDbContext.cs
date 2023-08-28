@@ -11,5 +11,5 @@ public class PostgreDbContext: DbContext
     public DbSet<User> User { get; set; }
     public DbSet<UserAddress> UserAddress { get; set; }
     public DbSet<EmailContainerConfiguration> EmailContainerConfiguration { get;set; }
-
+    public DbSet<Roles> Roles { get; set; }
 }

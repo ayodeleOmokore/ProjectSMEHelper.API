@@ -34,5 +34,7 @@ public class User
     public string? PictureURL { get; set; }
     public string? CompanyId { get; set; }
     public string? Locale { get; set; }
+    public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+
 
 }

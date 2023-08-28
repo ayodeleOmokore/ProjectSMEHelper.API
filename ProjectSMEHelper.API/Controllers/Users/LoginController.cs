@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjectSMEHelper.API.Contracts.Users.Requests;
+using ProjectSMEHelper.API.Contracts.Users.Responses;
 using ProjectSMEHelper.API.Services.UserServices.Interfaces;
 using System.Reflection.Emit;
 
@@ -42,7 +43,13 @@ namespace ProjectSMEHelper.API.Controllers.Users
             {
                 return BadRequest("Provide valid email");
             }
-            return Ok( await _loginService.CheckIfEmailExists(email));
+            LoginResponse loginResponse = await _loginService.CheckIfEmailExists(email);
+            if(loginResponse == null)
+            {
+                return NotFound();
+
+            }
+            return Ok(loginResponse);
         }
     }
 }

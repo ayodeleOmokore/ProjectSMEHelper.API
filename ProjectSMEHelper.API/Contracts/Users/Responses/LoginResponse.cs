@@ -1,4 +1,6 @@
-﻿namespace ProjectSMEHelper.API.Contracts.Users.Responses;
+﻿using ProjectSMEHelper.API.Models.Users;
+
+namespace ProjectSMEHelper.API.Contracts.Users.Responses;
 
 public class LoginResponse
 {
@@ -12,5 +14,9 @@ public class LoginResponse
     public string? OId { get; set; }
     public bool Verified { get; set; }
     public DateTime? VerifiedAt { get; set; }
+    public string? CompanyId { get; set; }
+    public ICollection<UserRole> Roles { get; set; }
+
+
 
 }

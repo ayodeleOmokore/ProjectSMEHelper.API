@@ -1,4 +1,6 @@
-﻿namespace ProjectSMEHelper.API.Contracts.Users.Responses;
+﻿using ProjectSMEHelper.API.Models.Users;
+
+namespace ProjectSMEHelper.API.Contracts.Users.Responses;
 
 public class RegisterUserResponse
 {
@@ -12,4 +14,8 @@ public class RegisterUserResponse
     public string? OId { get; set; }
     public string? OIdProvider { get; set; }
     public DateTime LastModifiedDate { get; set; }
+    public string? CompanyId { get; set; }
+
+    public ICollection<UserRole> Roles { get; set; }
+
 }
