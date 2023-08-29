@@ -13,6 +13,5 @@ public class RegisterUserByGoogleRequest
     public string? PictureURL { get; set; }
     public bool VerifiedEmail { get; set; }
     public string? Locale { get; set; }
-    public string? CompanyId { get; set; }
 
 }
