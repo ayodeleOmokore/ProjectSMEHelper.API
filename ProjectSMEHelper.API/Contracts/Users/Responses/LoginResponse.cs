@@ -15,6 +15,7 @@ public class LoginResponse
     public bool Verified { get; set; }
     public DateTime? VerifiedAt { get; set; }
     public string? CompanyId { get; set; }
+    public string? PictureURL { get; set; }
     public ICollection<UserRole> Roles { get; set; }
 
 

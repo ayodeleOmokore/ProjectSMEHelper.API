@@ -15,7 +15,7 @@ public class RegisterUserResponse
     public string? OIdProvider { get; set; }
     public DateTime LastModifiedDate { get; set; }
     public string? CompanyId { get; set; }
-
-    public ICollection<UserRole> Roles { get; set; }
+    public string? PictureURL { get; set; }
+    public ICollection<UserRole>? Roles { get; set; }
 
 }

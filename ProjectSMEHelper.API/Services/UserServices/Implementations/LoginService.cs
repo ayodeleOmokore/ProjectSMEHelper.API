@@ -36,6 +36,7 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                     OIdProvider = user.OIdProvider,
                     Verified = user.Verified,
                     CompanyId = user.CompanyId,
+                    PictureURL = user.PictureURL
                 };
             }
             else
@@ -81,6 +82,7 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                 Verified = user.Verified,
                 VerifiedAt = user.VerifiedAt,
                 CompanyId = user.CompanyId,
+                PictureURL = user.PictureURL,
             };
         }
     }

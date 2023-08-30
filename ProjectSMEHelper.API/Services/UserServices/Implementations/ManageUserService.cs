@@ -56,6 +56,7 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                 Verified = false,
                 OId = Guid.NewGuid().ToString(),
                 OIdProvider = "Self",
+                PictureURL = null,
             };
             _postgreDB.User.Add(newUser);
             await _postgreDB.SaveChangesAsync();
@@ -103,6 +104,7 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                     OIdProvider = user.OIdProvider,
                     LastModifiedDate = user.LastModifiedDate,
                     CompanyId = user.CompanyId, 
+                    PictureURL = user.PictureURL,
                 };
             }
             User newUser = new()
@@ -116,7 +118,7 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                 OIdProvider = request.OIdProvider,
                 LastModifiedDate = DateTime.UtcNow,
                 PictureURL = request.PictureURL,
-                Phonenumber = request.PhoneNumber.Trim(),
+                //Phonenumber = request.PhoneNumber.Trim(),
                 Locale = request.Locale,
                 Status = 2,
             };
@@ -138,6 +140,7 @@ namespace ProjectSMEHelper.API.Services.UserServices.Implementations
                     OIdProvider = responseUser.OIdProvider,
                     LastModifiedDate = responseUser.LastModifiedDate,
                     CompanyId = responseUser.CompanyId,
+                    PictureURL = responseUser.PictureURL,
                 };
             }
             return null;
