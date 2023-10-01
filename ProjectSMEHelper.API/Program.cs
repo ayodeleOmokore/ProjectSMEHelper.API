@@ -59,6 +59,8 @@ builder.Services.AddTransient<IManageUserService, ManageUserService>();
 builder.Services.AddTransient<DAL>();
 builder.Services.AddTransient<ProjectSMEHelper.API.Helpers.Utility>();
 builder.Services.AddTransient<ISendEmailService, SendEmailService>();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

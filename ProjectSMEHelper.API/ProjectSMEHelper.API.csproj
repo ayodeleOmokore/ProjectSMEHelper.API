@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Google.Apis.Auth" Version="1.61.0" />
     <PackageReference Include="MailKit" Version="4.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.21" />
@@ -41,12 +43,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Contracts\Company\Responses\" />
     <Folder Include="Controllers\Customers\" />
-    <Folder Include="Controllers\Company\" />
     <Folder Include="Controllers\Transactions\" />
     <Folder Include="Controllers\Products\" />
     <Folder Include="DBContext\CosmoDBContext\" />
-    <Folder Include="Services\CompanyServices\" />
     <Folder Include="Services\CustomerServices\" />
     <Folder Include="Services\TransactionServices\" />
     <Folder Include="Services\ProductServices\" />
